@@ -5,7 +5,7 @@ using namespace std;
 struct Director {
 	char* fullname;
 	char* speciality;
-	char* fullname;
+	char* experience;
 
 };
 
@@ -13,6 +13,7 @@ struct Teacher {
 	char* fullname;
 	char* speciality;
 	char* experience;
+	int id = 0;
 };
 
 
@@ -37,6 +38,7 @@ struct Academy {
 	Teacher** teachers;
 	int teachers_count = 0;
 	Group** groups;
+	Academy* academy;
 	int groups_count = 0;
 };
 
