@@ -22,7 +22,6 @@ struct Student {
 	int age;
 };
 
-
 struct Group {
 	char* group_name;
 	char* speciality;
