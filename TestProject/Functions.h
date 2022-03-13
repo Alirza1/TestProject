@@ -5,8 +5,6 @@
 #include "Entities.h"
 using namespace std;
 
-Academy academy;
-
 
 void ShowMenu() {
 	system("cls");
@@ -57,10 +55,17 @@ Student** students = new Student * [] {
 };
 
 
+Director** directors = new Director * [] {
+	new Director{
+		new char[] {"David Davidzade"},
+		new char[] {"Director"},
+		new char[] {"34"}
+	}
+};
 
 
 
-void ShowTeacher(Teacher*teacher) {
+void ShowTeacher(Teacher* teacher) {
 	cout << endl;
 	cout << "  Teacher's Id {" << teacher->id << "}" << endl << endl;
 	cout << "  Teacher's fullname --> " << teacher->fullname << endl;
@@ -77,7 +82,8 @@ void ShowAllTeachers(Academy* academy) {
 }
 
 
-void ShowStudent(Student*student) {
+
+void ShowStudent(Student* student) {
 	cout << endl;
 	cout << "  Student's fullname --> " << student->fullname << endl;
 	cout << "  Student's speciality --> " << student->class_specialty << endl;
@@ -94,7 +100,7 @@ void ShowAllStudentsInAcademy(Academy* academy) {
 }
 
 
-void ShowAllStudentsInGroup(Group*group) {
+void ShowAllStudentsInGroup(Group* group) {
 	cout << endl;
 	for (size_t i = 0; i < group->students_count; i++)
 	{
